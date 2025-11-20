@@ -7,6 +7,7 @@ import { AuthProvider } from './auth/AuthContext'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
 import Connections from './pages/Connections'
+import RouteEditorWrapper from './components/RouteEditorWrapper'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -19,6 +20,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/connections" element={<Connections />} />
+          <Route path="/editor/:overlayId" element={<RouteEditorWrapper />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
